@@ -1,0 +1,12 @@
+*.sqlite3
+*.sqlite3-journal
+*.pyc
+*.xlsx
+*.xls
+*.csv
+
+backup/
+ssl/
+static/
+migrations/
+_pycache_/
