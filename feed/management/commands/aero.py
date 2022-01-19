@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("AeroPrecision", 0, "Start Processing AeroPrecision Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=290501&auth=45be2e0bb44175e8729e235882ad17a5", "AeroPrecision.csv") == False:
+                "", "AeroPrecision.csv") == False:
             sys.exit(1)
 
         AeroPrecision.objects.all().delete()

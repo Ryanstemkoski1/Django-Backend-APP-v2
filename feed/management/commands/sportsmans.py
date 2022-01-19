@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("SportsmansGuide", 0, "Start Processing SportsmansGuide Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=289909&auth=45be2e0bb44175e8729e235882ad17a5", "SportsmansGuide.csv") == False:
+                "", "SportsmansGuide.csv") == False:
             sys.exit(1)
 
         SportsmansGuide.objects.all().delete()

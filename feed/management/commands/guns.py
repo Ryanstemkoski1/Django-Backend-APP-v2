@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("Guns", 0, "Start Processing Guns Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=289429&auth=45be2e0bb44175e8729e235882ad17a5", "Guns.csv") == False:
+                "", "Guns.csv") == False:
             sys.exit(1)
 
         Guns.objects.all().delete()

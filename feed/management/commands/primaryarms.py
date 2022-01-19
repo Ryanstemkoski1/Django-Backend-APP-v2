@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("PrimaryArms", 0, "Start Processing PrimaryArms Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=289901&auth=45be2e0bb44175e8729e235882ad17a5", "PrimaryArms.csv") == False:
+                "", "PrimaryArms.csv") == False:
             sys.exit(1)
 
         PrimaryArms.objects.all().delete()

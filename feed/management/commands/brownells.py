@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("Brownells", 0, "Start Processing Brownells Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=289913&auth=45be2e0bb44175e8729e235882ad17a5", "Brownells.csv") == False:
+                "", "Brownells.csv") == False:
             sys.exit(1)
 
         Brownells.objects.all().delete()

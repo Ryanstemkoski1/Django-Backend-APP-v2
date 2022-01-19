@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("Gear1800", 0, "Start Processing Gear1800 Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=289905&auth=45be2e0bb44175e8729e235882ad17a5", "Gear1800.csv") == False:
+                "", "Gear1800.csv") == False:
             sys.exit(1)
 
         Gear1800.objects.all().delete()

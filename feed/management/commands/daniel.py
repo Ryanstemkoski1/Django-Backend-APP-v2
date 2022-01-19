@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("DanielDefense", 0, "Start Processing DanielDefense Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=290369&auth=45be2e0bb44175e8729e235882ad17a5", "DanielDefense.csv") == False:
+                "", "DanielDefense.csv") == False:
             sys.exit(1)
 
         DanielDefense.objects.all().delete()

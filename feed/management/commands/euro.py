@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("EuroOptic", 0, "Start Processing EuroOptic Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=290373&auth=45be2e0bb44175e8729e235882ad17a5", "EuroOptic.csv") == False:
+                "", "EuroOptic.csv") == False:
             sys.exit(1)
 
         EuroOptic.objects.all().delete()

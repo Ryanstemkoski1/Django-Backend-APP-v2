@@ -27,7 +27,7 @@ class Command(BaseCommand):
         debug("Palmetto", 0, "Start Processing Palmetto Data Feed")
 
         if common.filedownload(
-                "http://datafeed.avantlink.com/download_feed.php?id=288953&auth=45be2e0bb44175e8729e235882ad17a5", "palmetto.csv") == False:
+                "", "palmetto.csv") == False:
             sys.exit(1)
 
         Palmetto.objects.all().delete()
